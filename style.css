@@ -1,0 +1,230 @@
+/* Estilos Globais - Base para Desktop (Desktop First, seletor de menu) */
+body {
+  background-color: #fffcfd;
+  color: #492c1a;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- Header --- */
+header {
+  position: relative; /* Mantido */
+  background-color: #3e5461; /* Nova cor de fundo do header */
+  padding: 1.2rem 0; /* Padding superior e inferior */
+  /* Removido o 'position: relative;">' que estava com erro de sintaxe */
+}
+
+/* Botão de Menu (Hamburger) - Escondido por padrão (desktop) */
+.menu-toggle {
+  display: none; /* Escondido por padrão em telas grandes */
+  background: none;
+  border: none;
+  color: #fffaf6; /* Nova cor do botão */
+  font-size: 1.5rem; /* Novo tamanho da fonte */
+  position: absolute;
+  top: 0rem;
+  right: 1rem; /* Posicionado à direita */
+  cursor: pointer;
+  z-index: 1000;
+font-weight: bold;
+  background-color: #162d61;
+}
+
+/* Navegação Principal - Estilo para Desktop (Visível por Padrão) */
+.menu { /* Não usei nav.menu aqui para ser compatível com seu novo seletor */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex; /* Visível e em linha por padrão (desktop) */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem; /* Adiciona um pouco de padding nas laterais */
+}
+
+.menu a {
+  color: #fffaf6; /* Nova cor dos links */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem; /* Adicionado padding para os links */
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #00fff2; /* Exemplo de cor ao passar o mouse */
+}
+
+
+#bonifacioPic {
+  margin-top: 100px; 
+  max-height: 350px;
+  width: auto;
+}
+
+.voPic {
+  margin-top: 50px;
+  max-height: 350px;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+.estante {
+  max-width: 85%;
+   margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* --- Media Query para Mobile e Tablet (Telas até 768px de largura) --- */
+@media (max-width: 768px) {
+  nav.menu { /* Usando nav.menu para garantir que o seletor seja mais específico se necessário */
+    display: none; /* Escondido por padrão em mobile/tablet */
+    flex-direction: column; /* Links em coluna */
+    background-color: #473e61; /* Cor de fundo do menu mobile */
+    padding: 1rem;
+    position: absolute; /* Para o menu deslizar */
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 998;
+  }
+
+  nav.menu.active {
+    display: flex; /* Mostra o menu quando ativo */
+  }
+
+  .menu-toggle {
+    display: block; /* Visível em mobile/tablet */
+  }
+}
+
+/* --- Conteúdo Principal --- */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Estilo para a seção de texto inicial */
+.container > section:first-of-type {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.container p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* --- Seção de Livros (Grid) --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.book {
+  background-color: #e5f5f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid #a5b6d0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.book img {
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #d0a9a5;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.book h2 {
+  font-size: 1.8rem;
+  color: #231a49;
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.book p {
+  font-size: 1rem;
+  color: #3a376a;
+  margin-bottom: 1.5rem;
+  min-height: 60px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book button {
+  background-color: #1350a0;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.book button:hover {
+  background-color: #610b5d;
+}
+
+.perfil {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.perfil img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 4px solid #d0a9a5;
+}
+
+.perfil .texto {
+  flex: 1;
+  min-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .perfil {
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .perfil .texto {
+    text-align: justify;
+  }
+}

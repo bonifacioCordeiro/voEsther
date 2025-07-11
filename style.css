@@ -134,7 +134,7 @@ p {
 
 .estante {
   max-width: 85%;
-   margin: 2rem auto;
+  margin: 2rem auto;
   padding: 1rem;
 }
 
@@ -235,14 +235,14 @@ p {
 /* --- Seção de Livros (Grid) --- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1rem;
+  padding: 0.5rem;
 }
 
 .book {
   background-color: #e5f5f9;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 10px;
   border: 2px solid #a5b6d0;
   text-align: center;
@@ -264,7 +264,7 @@ p {
 }
 
 .book h2 {
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   color: #231a49;
   margin-top: 0.5rem;
   margin-bottom: 0.8rem;
@@ -293,6 +293,10 @@ p {
   transition: background-color 0.3s ease;
   text-decoration: none;
   display: inline-block;
+}
+
+.proibido {
+  color: red;
 }
 
 .book button:hover {

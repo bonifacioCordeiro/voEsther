@@ -20,10 +20,11 @@
 </head>
  
 <body>
-  <header>
+  <header id="topo">
   <button class="menu-toggle" onclick="document.querySelector('nav.menu').classList.toggle('active')">Livros <span class="icone">☰</span></button>
   <nav class="menu">
     <a href="#bonifacio">Sobre Bonifácio</a>
+    <a href="#depoimento">Depoimentos</a>
     <a href="#livros">Livros a venda</a>
     <a href="#vo">Vó Esther</a>
     <a href="#redes">Redes sociais</a>
@@ -49,6 +50,36 @@
     </div>
   </div>
 </section>
+
+<section id="depoimento">
+  <h1>Depoimentos</h1>
+  <div class="carrossel">
+    <div class="slides" id="slides">
+      <img src="./imagens/depoimento/carolinaM.png" alt="Depoimento de Carolina" />
+      <img src="./imagens/depoimento/cidinha.png" alt="Depoimento de Cidinha" />
+      <img src="./imagens/depoimento/cleide.png" alt="Depoimento de Cleide" />
+      <img src="./imagens/depoimento/dejanira.png" alt="Depoimento de Dejanira" />
+      <img src="./imagens/depoimento/elianne.png" alt="Depoimento de Elianne" />
+      <img src="./imagens/depoimento/everaldo.png" alt="Depoimento de Everaldo" />
+      <img src="./imagens/depoimento/nelma.png" alt="Depoimento de Nelma" />
+      <img src="./imagens/depoimento/raissa.png" alt="Depoimento de Raissa" />
+      <img src="./imagens/depoimento/regina.png" alt="Depoimento de Regina" />
+      <img src="./imagens/depoimento/rennan.png" alt="Depoimento de Rennan" />
+      <img src="./imagens/depoimento/ricardo.png" alt="Depoimento de Ricardo" />
+      <img src="./imagens/depoimento/rosana.png" alt="Depoimento de Rosana" />
+      <img src="./imagens/depoimento/salao.png" alt="Depoimento de Jo do salão de beleza" />
+      <img src="./imagens/depoimento/seiko.png" alt="Depoimento de Seiko" />
+      <img src="./imagens/depoimento/sem_nome.png" alt="Depoimento de Anônimo" />
+    </div>
+        <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+  
+  </div>
+  </section>
+
+
+
+
 
 <section class="estante">
     <h1 id="livros">Livros</h1>
@@ -129,15 +160,21 @@
 </section>
 
 
-    <section class="container">
-      <h1 id="redes">Redes Sociais</h1>
-      <div class="lado">
-      <p><a href=""> Instagram</a></p>
-      <a href=""><img src="./imagens/insta.png"></a>
-      <p><a href=""> Facebook</a></p>
-      <a href=""><img src="./imagens/face.png"></a>
-      </div>
-    </section>
+<section class="social">
+  <h1 id="redes">Redes Sociais</h1>
+  <div class="lado">
+    <div class="rede">
+      <p><a href="">Instagram</a></p>
+      <a href=""><img class="socialM" src="./imagens/insta.png" alt="Instagram"></a>
+    </div>
+    <div class="rede">
+      <p><a href="">Facebook</a></p>
+      <a href=""><img class="socialM" src="./imagens/face.png" alt="Facebook"></a>
+    </div>
   </div>
+</section>
+  </div>
+  <a href="#topo" id="btnTopo" title="Voltar ao topo">⬆️Início</a>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -39,8 +39,7 @@ font-weight: bold;
   margin: 0 auto;
   display: flex; /* Visível e em linha por padrão (desktop) */
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-between;
   padding: 0 1rem; /* Adiciona um pouco de padding nas laterais */
 }
 
@@ -55,6 +54,55 @@ font-weight: bold;
 .menu a:hover {
     color: #00fff2; /* Exemplo de cor ao passar o mouse */
 }
+
+
+
+
+.carrossel {
+  width: 300px;
+   margin: 0 auto; 
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides img {
+  max-width: 300px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 
 
 #bonifacioPic {
@@ -73,6 +121,8 @@ font-weight: bold;
   display: block;
 }
 
+
+
 h1 {
   text-align: center;
   font-size: 2rem;
@@ -86,6 +136,58 @@ p {
   max-width: 85%;
    margin: 2rem auto;
   padding: 1rem;
+}
+
+.botao {
+  background-color: #2b09a8;
+  color: #e5f5f9;
+  padding: 1rem;
+  border-radius: 20px;
+
+}
+
+.lado {
+  display: flex;
+  gap: 40px; /* Espaçamento entre as redes sociais */
+  justify-content: center;
+}
+
+.rede {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px; /* controla a largura do bloco */
+}
+
+.rede p {
+  margin: 0 0 8px; /* espaço entre o texto e a imagem */
+  font-size: 1.2em;
+}
+
+.socialM {
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+#btnTopo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 20px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+#btnTopo:hover {
+  opacity: 1;
 }
 
 /* --- Media Query para Mobile e Tablet (Telas até 768px de largura) --- */
